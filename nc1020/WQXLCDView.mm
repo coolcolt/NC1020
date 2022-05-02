@@ -109,6 +109,5 @@
     [lcdUIImg drawInRect:CGRectMake(0, 0, rect.size.width-1, rect.size.height-1) blendMode:kCGBlendModeSourceOut alpha:1.0f];
     CGImageRelease(lcdImg);
     CGContextRelease(lcdCtx);
-    
 }
 @end
