@@ -70,7 +70,7 @@
     if (keyCode < kWQXCustomKeyCodeBegin) {
         wqx::SetKey((uint8_t)keyCode, TRUE);
     }
-    NSLog(@"Did keydown with keycode: %d\n", keyCode);
+    NSLog(@"Did keydown with keycode: %d\n", static_cast<int>(keyCode));
 }
 
 - (void)setScreenLayout:(WQXScreenLayout *)layout {
@@ -114,7 +114,7 @@
                 break;
         }
     }
-    NSLog(@"Did keyup with keycode: %d\n", keyCode);
+    NSLog(@"Did keyup with keycode: %d\n", static_cast<int>(keyCode));
 }
 
 - (void)wqxloopThreadCallback {

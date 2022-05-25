@@ -775,13 +775,13 @@ bool CopyLcdBuffer(uint8_t* buffer){
 
 void RunTimeSlice(size_t time_slice, bool speed_up) {
 	size_t end_cycles = time_slice * CYCLES_MS;
-	register size_t cycles = wqx::cycles;
-	register uint16_t reg_pc = wqx::reg_pc;
-	register uint8_t reg_a = wqx::reg_a;
-	register uint8_t reg_ps = wqx::reg_ps;
-	register uint8_t reg_x = wqx::reg_x;
-	register uint8_t reg_y = wqx::reg_y;
-	register uint8_t reg_sp = wqx::reg_sp;
+	auto cycles = wqx::cycles;
+	auto reg_pc = wqx::reg_pc;
+	auto reg_a = wqx::reg_a;
+	auto reg_ps = wqx::reg_ps;
+	auto reg_x = wqx::reg_x;
+	auto reg_y = wqx::reg_y;
+	auto reg_sp = wqx::reg_sp;
 
 	while (cycles < end_cycles) {
 //#ifdef DEBUG

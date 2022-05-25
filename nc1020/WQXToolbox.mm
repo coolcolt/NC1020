@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 rainyx. All rights reserved.
 //
 
-#import "WQXToolBox.h"
+#import "WQXToolbox.h"
 #import <CommonCrypto/CommonDigest.h>
 
 @implementation WQXToolbox
@@ -19,7 +19,7 @@
     unsigned char md5Buffer[CC_MD5_DIGEST_LENGTH];
     
     // Create 16 byte MD5 hash value, store in buffer
-    CC_MD5(ptr, strlen(ptr), md5Buffer);
+    CC_MD5(ptr, static_cast<CC_LONG>(strlen(ptr)), md5Buffer);
     
     // Convert MD5 value in the buffer to NSString of hex values
     NSMutableString *output = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];

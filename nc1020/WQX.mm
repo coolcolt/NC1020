@@ -68,8 +68,7 @@ static NSArray *_layoutClassNames = Nil;
 
 + (WQX *)sharedInstance {
     if (_instance == Nil) {
-        
-        _layoutClassNames = [[NSArray alloc] initWithObjects:@"WQXDefaultScreenLayout", @"WQXGMUDScreenLayout", nil];
+        _layoutClassNames = @[@"WQXDefaultScreenLayout", @"WQXGMUDScreenLayout"];
         
         NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
         NSData *data = [preferences objectForKey:@"perferences"];
